@@ -5,5 +5,5 @@ Given("I access the home page", () => {
 });
 
 When("I see the example message in the title", () => {
-  cy.contains("h3", "Welcome to Your Vue.js App");
+  cy.contains("h3", "Vue.js");
 });
