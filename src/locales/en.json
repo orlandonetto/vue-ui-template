@@ -1,0 +1,7 @@
+{
+  "example": {
+    "msg": "Example Component message",
+    "welcome": "Welcome to Your Vue.js App",
+    "changeLang": "Change language"
+  }
+}

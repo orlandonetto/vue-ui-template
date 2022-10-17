@@ -8,7 +8,7 @@ export default {
   props: {
     msg: {
       type: String,
-      default: () => "Example Component message",
+      default: () => this.$t("example.msg"),
     },
   },
 };

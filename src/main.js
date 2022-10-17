@@ -6,9 +6,11 @@ import store from "./store";
 Vue.config.productionTip = false;
 
 import "@/styles/main.scss";
+import i18n from "./i18n";
 
 new Vue({
   router,
   store,
+  i18n,
   render: (h) => h(App),
 }).$mount("#app");

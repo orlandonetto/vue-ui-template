@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../../assets/logo.png" />
-    <Example msg="Welcome to Your Vue.js App" />
+    <Example :msg="$t('example.welcome')" />
+    <button @click="handleChangeLang">{{ $t("example.changeLang") }}</button>
   </div>
 </template>
 
@@ -12,6 +13,12 @@ export default {
   name: "HomeView",
   components: {
     Example,
+  },
+  methods: {
+    handleChangeLang() {
+      const isBR = this.$i18n.locale === "br";
+      this.$i18n.locale = isBR ? "en" : "br";
+    },
   },
 };
 </script>
