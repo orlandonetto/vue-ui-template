@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: 'Poppins', sans-serif !important;
+}
+body {
+  background-color: $bg;
+}
+
+#app {
+  margin: 10px 32px;
+  background-color: $bg;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+section,
+div,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

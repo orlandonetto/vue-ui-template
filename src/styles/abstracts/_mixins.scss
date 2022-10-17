@@ -1,0 +1,6 @@
+@mixin font-source($size: false, $color: false, $weight: false,  $lineHeight: false) {
+  @if $size { font-size: $size !important; }
+  @if $color { color: $color; }
+  @if $weight { font-weight: $weight; }
+  @if $lineHeight { line-height: $lineHeight; }
+}

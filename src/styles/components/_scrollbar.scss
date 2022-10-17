@@ -1,0 +1,28 @@
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 7px;
+    border: 3px solid transparent;
+    background-color: #dadee3bf;
+    background-clip: padding-box;
+
+    &:hover {
+      background-color: #dadee3;
+    }
+  }
+
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  &::-webkit-resizer,
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
