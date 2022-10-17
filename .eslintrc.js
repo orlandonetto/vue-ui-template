@@ -2,7 +2,9 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    "cypress/globals": true,
   },
+  plugins: ["cypress"],
   extends: [
     "plugin:vue/essential",
     "eslint:recommended",
