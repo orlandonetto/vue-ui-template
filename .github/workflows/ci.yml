@@ -4,7 +4,7 @@ on:
     branches: [ "develop", "master" ]
 
 jobs:
-  main:
+  pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         run: npm run lint
 
       - name: test-unit
-        run: npm run test:unit
+        run: npm run test:coverage
 
       - name: test-e2e
         uses: cypress-io/github-action@v2

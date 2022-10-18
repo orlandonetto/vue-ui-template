@@ -1,5 +1,9 @@
 <template>
-  <h3>{{ msg }}</h3>
+  <div>
+    <h3>{{ msg }}</h3>
+    <span>{{ count }}</span>
+    <button @click="handleCount">+</button>
+  </div>
 </template>
 
 <script>
@@ -8,7 +12,19 @@ export default {
   props: {
     msg: {
       type: String,
-      default: () => this.$t("example.msg"),
+      default: function () {
+        return this.$t("example.msg");
+      },
+    },
+  },
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    handleCount() {
+      this.count++;
     },
   },
 };
