@@ -29,7 +29,7 @@
         text
       >
         <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon>fi-rr-home</v-icon>
       </v-btn>
     </v-app-bar>
 
