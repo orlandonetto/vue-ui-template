@@ -1,0 +1,35 @@
+name: CI
+on:
+  pull_request:
+    branches: [ "develop", "master" ]
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
+
+      - name: install-dependencies
+        run: npm install
+
+      - name: lint
+        run: npm run lint
+
+      - name: test-unit
+        run: npm run test:coverage
+
+      - name: test-e2e
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run serve
+          wait-on: http://localhost:8080/
+          config_file: cypress.json
+          spec: "tests/e2e/**/*"
+        env:
+          CYPRESS_BASE_URL: http://localhost:8080/

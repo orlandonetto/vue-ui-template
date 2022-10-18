@@ -1,0 +1,25 @@
+$primary: #8010da;
+$neutral: #ffffff;
+$neutral-1: #2c3a4b;
+$status-success: #287d3c;
+$status-error: #da1414;
+$status-warn: #b95000;
+$status-info: #2e5aac;
+$bg: #f1f1f1;
+$bg-success: #edf9f0;
+$bg-error: #feefef;
+$bg-warn: #fff4ec;
+$bg-info: #eef2fa;
+
+:export {
+  primary: $primary;
+  neutral: $neutral;
+  neutral1: $neutral-1;
+  statusError: $status-error;
+  statusWarn: $status-warn;
+  statusInfo: $status-info;
+  bgSuccess: $bg-success;
+  bgError: $bg-error;
+  bgWarn: $bg-warn;
+  bgInfo: $bg-info;
+}

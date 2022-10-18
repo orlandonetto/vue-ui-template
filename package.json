@@ -6,12 +6,18 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "test:coverage": "vue-cli-service test:unit --coverage --forceExit --runInBand --expand --verbose --detectOpenHandles",
+    "test:coverage2": "vue-cli-service test:unit --forceExit --detectOpenHandles --expand --verbose --coverage",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "lint:fix": "vue-cli-service lint --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
+    "vue-i18n": "^8.26.3",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
   },
@@ -29,16 +35,23 @@
     "@vue/vue2-jest": "^27.0.0-alpha.2",
     "babel-jest": "^27.0.6",
     "cypress": "^9.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^8.0.0",
     "jest": "^27.0.5",
     "lint-staged": "^11.1.2",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "vue-cli-plugin-i18n": "~2.3.1",
     "vue-template-compiler": "^2.6.14"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "tests/e2e/specs"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
