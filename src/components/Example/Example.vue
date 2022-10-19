@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>{{ msg }}</h3>
-    <span>{{ count }}</span>
-    <button @click="handleCount">+</button>
+    <span data-test-count-value>{{ count }}</span>
+    <v-btn data-test-count-btn @click="handleCount">+</v-btn>
   </div>
 </template>
 
