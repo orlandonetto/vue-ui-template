@@ -6,8 +6,6 @@ import store from "./store";
 import i18n from "./i18n";
 import vuetify from "./plugins/vuetify";
 
-import "@/styles/main.scss";
-
 Vue.config.productionTip = false;
 
 const app = new Vue({

@@ -10,16 +10,3 @@ $bg-success: #edf9f0;
 $bg-error: #feefef;
 $bg-warn: #fff4ec;
 $bg-info: #eef2fa;
-
-:export {
-  primary: $primary;
-  neutral: $neutral;
-  neutral1: $neutral-1;
-  statusError: $status-error;
-  statusWarn: $status-warn;
-  statusInfo: $status-info;
-  bgSuccess: $bg-success;
-  bgError: $bg-error;
-  bgWarn: $bg-warn;
-  bgInfo: $bg-info;
-}
